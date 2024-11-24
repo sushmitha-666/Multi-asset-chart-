@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Multi Asset</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="multiAssetChart" width="400" height="200"></canvas>
+    <script>
+        const ctx = document.getElementById('multiAssetChart').getContext('2d');
+        const multiAssetChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['GORGE','ANJELICA','ANNA','TINA'],
+                datasets: [
+                    {
+                        label: 'Stocks',
+                        data: [12,54,34,64],
+                        borderColor: 'red',
+                        fill: true
+                    },
+                    {
+                        label: 'Bonds',
+                        data: [34,78,4,78,90],
+                        borderColor:'aqua',
+            
+                    },
+                    {
+                        label: 'Crypto',
+                        data: [9,67,90,45],
+                        borderColor: 'black)',
+                        fill: true
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y:
+                     {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
